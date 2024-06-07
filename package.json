@@ -1,0 +1,29 @@
+{
+  "name": "game-of-life",
+  "version": "1.0.0",
+  "main": "out/main.js",
+  "license": "MIT",
+  "description": "Game of Life",
+  "dependencies": {
+    "pixi.js": "^8.1.6",
+    "playcanvas": "^1.71.3",
+    "tsc": "^2.0.4",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "electron": "^30.0.9"
+  },
+  "scripts": {
+    "build": "yarn tsc -b && node scripts/compiler.js",
+    "dev": "yarn build && yarn electron . --dev",
+    "start": "yarn build && yarn electron .",
+    "lint": "yarn prettier -w src",
+    "linted": "git add . && git commit -m \"refactor: ♻️ Run prettier\"",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.draverindustries.game-of-life",
+    "productName": "Game of Life"
+  }
+}

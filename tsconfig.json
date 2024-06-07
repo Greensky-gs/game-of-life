@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "module": "CommonJS",
+      "noImplicitAny": true,
+      "sourceMap": true,
+      "outDir": "out",
+      "baseUrl": ".",
+      "paths": {
+        "*": ["node_modules/*"]
+      },
+      "resolveJsonModule": true
+    },
+    "include": [
+      "src/**/*",
+      "./environment.d.ts"
+    ]
+  }
